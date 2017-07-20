@@ -1,0 +1,47 @@
+AppBundle\Entity\Pasien:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PasienRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        kodeRm:
+            type: string
+            length: '20'
+            column: kode_rm
+        namaPasien:
+            type: string
+            length: '100'
+            column: nama_pasien
+        tglLahir:
+            type: date
+            nullable: true
+            column: tgl_lahir
+        alamatPasien:
+            type: string
+            length: '100'
+            nullable: true
+            column: alamat_pasien
+        tanggalDaftar:
+            type: date
+            column: tanggal_daftar
+        jamDaftar:
+            type: time
+            column: jam_daftar
+        jenisKelamin:
+            type: integer
+            nullable: true
+            column: jenis_kelamin
+        isValidated:
+            type: integer
+            nullable: true
+            column: is_validated
+        isDeleted:
+            type: integer
+            nullable: true
+            column: is_deleted
+    lifecycleCallbacks: {  }

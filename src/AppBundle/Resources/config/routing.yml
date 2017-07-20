@@ -1,0 +1,46 @@
+app_admin:
+    resource: "@AppBundle/Resources/config/routing/routing_admin.yml"
+    prefix: /admin
+
+app_user:
+    resource: "@AppBundle/Resources/config/routing/routing_user.yml"
+    prefix: /user
+
+app_homepage:
+      path: /
+      defaults: { _controller: AppBundle:Security:loginCheck }
+
+app_register:
+      path: /register
+      defaults:
+        _controller: AppBundle:User:register
+
+app_logout:
+      path: /logout
+      defaults:
+        _controller: AppBundle:User:logout
+
+
+#app_create_user:
+#      path: /user/create
+#      defaults: { _controller: AppBundle:Default:createAdmin  }
+#
+#app_update_user:
+#      path: /user/update/{id}
+#      defaults: { _controller: AppBundle:Default:updateAdmin }
+#
+#app_delete_user:
+#      path: /user/delete/{id}
+#      defaults: { _controller: AppBundle:Default:deleteAdmin }
+#
+#app_show_list:
+#      path: /user/list
+#      defaults: { _controller: AppBundle:Default:showAdmin }
+#
+#app_login_user:
+#      path: /login
+#      defaults: { _controller: AppBundle:Default:login }
+#
+#app_logout_user:
+#      path: /logout
+#      defaults: { _controller: AppBundle:Default:logout }
