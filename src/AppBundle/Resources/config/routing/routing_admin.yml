@@ -2,3 +2,13 @@ app_admin_index:
     path: /
     defaults:
       _controller: AppBundle:Admin:index
+
+app_admin_daftar_pasien:
+    path: /pasien
+    defaults:
+      _controller: AppBundle:Pasien:getAllPasien
+
+app_admin_input_pasien:
+    path: /input-pasien
+    defaults:
+      _controller: AppBundle:Pasien:inputPasien

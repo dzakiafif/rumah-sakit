@@ -271,8 +271,22 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""></a>
-                            <i class="material-icons"></i>
+                            <a href="#" class="menu-toggle">
+                            <i class="material-icons">perm_identity</i>
+                            <span>Pasien</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_pasien') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_pasien') }}">
+                                        <span>Daftar Pasien</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     {% else %}
                         <li class="active">

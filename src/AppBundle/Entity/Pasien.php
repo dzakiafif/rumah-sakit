@@ -226,7 +226,7 @@ class Pasien
      */
     public function setJamDaftar($jamDaftar)
     {
-        $this->jamDaftar = $jamDaftar;
+        $this->jamDaftar = new \DateTime($jamDaftar);
 
         return $this;
     }

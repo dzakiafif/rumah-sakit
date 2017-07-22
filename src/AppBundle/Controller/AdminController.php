@@ -12,6 +12,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Pasien;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller
 {
@@ -22,14 +23,5 @@ class AdminController extends Controller
         $user = count($em->getRepository(User::class)->findAll());
 
         return $this->render('AppBundle:home:home.html.twig',['user'=>$user]);
-    }
-
-    public function getAllPasienAction()
-    {
-        $em = $this->getDoctrine()->getEntityManager();
-
-        $data = $em->getRepository(Pasien::class)->findAll();
-
-        return $this->render();
     }
 }
