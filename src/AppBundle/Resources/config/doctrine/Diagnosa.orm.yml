@@ -1,0 +1,17 @@
+AppBundle\Entity\Diagnosa:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DiagnosaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaDiagnosa:
+            type: string
+            length: 255
+            unique: true
+            column: nama_diagnosa
+    lifecycleCallbacks: {  }

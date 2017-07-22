@@ -1,0 +1,17 @@
+AppBundle\Entity\Ruangan:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RuanganRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaRuangan:
+            type: string
+            length: 255
+            unique: true
+            column: nama_ruangan
+    lifecycleCallbacks: {  }

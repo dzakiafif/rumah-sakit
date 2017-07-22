@@ -1,0 +1,17 @@
+AppBundle\Entity\Poli:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PoliRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaPoli:
+            type: string
+            length: 255
+            unique: true
+            column: nama_poli
+    lifecycleCallbacks: {  }

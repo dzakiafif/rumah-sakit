@@ -1,0 +1,17 @@
+AppBundle\Entity\Dokter:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DokterRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaDokter:
+            type: string
+            length: '255'
+            unique: true
+            column: nama_dokter
+    lifecycleCallbacks: {  }

@@ -1,0 +1,17 @@
+AppBundle\Entity\Penjamin:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PenjaminRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaPenjamin:
+            type: string
+            length: 255
+            unique: true
+            column: nama_penjamin
+    lifecycleCallbacks: {  }

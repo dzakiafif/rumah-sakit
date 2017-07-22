@@ -1,0 +1,30 @@
+AppBundle\Entity\Peminjaman:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PeminjamanRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        tglPeminjaman:
+            type: datetime
+            column: tgl_peminjaman
+        namaPeminjam:
+            type: string
+            length: 255
+            column: nama_peminjam
+        petugasRekamMedis:
+            type: string
+            length: 255
+            column: petugas_rekam_medis
+        tglKembali:
+            type: datetime
+            column: tgl_kembali
+        namaPengembalian:
+            type: string
+            length: 255
+            column: nama_pengembalian
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+AppBundle\Entity\Klpcm:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\KlpcmRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pr:
+            type: integer
+        tglSetor:
+            type: datetime
+            column: tgl_setor
+        tglKembali:
+            type: datetime
+            column: tgl_kembali
+        catatanJam:
+            type: string
+            length: 255
+            column: catatan_jam
+    lifecycleCallbacks: {  }

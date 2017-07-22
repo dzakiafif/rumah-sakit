@@ -1,0 +1,38 @@
+AppBundle\Entity\Drm:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DrmRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        tglMrs:
+            type: datetime
+            column: tgl_mrs
+        tglKrs:
+            type: datetime
+            column: tgl_krs
+        tglSetor:
+            type: string
+            length: 255
+            column: tgl_setor
+        catatanJam:
+            type: string
+            length: 255
+            column: catatan_jam
+        kondisiPulang:
+            type: string
+            length: 255
+            column: kondisi_pulang
+        operasi:
+            type: integer
+        jenisOperasi:
+            type: integer
+            column: jenis_operasi
+        isValidated:
+            type: integer
+            column: is_validated
+    lifecycleCallbacks: {  }
