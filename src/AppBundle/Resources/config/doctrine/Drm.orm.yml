@@ -16,12 +16,10 @@ AppBundle\Entity\Drm:
             type: datetime
             column: tgl_krs
         tglSetor:
-            type: string
-            length: 255
+            type: datetime
             column: tgl_setor
         catatanJam:
-            type: string
-            length: 255
+            type: time
             column: catatan_jam
         kondisiPulang:
             type: string

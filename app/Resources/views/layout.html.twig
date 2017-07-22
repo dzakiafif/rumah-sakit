@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>{% block title %}{% endblock %} - Rumah Sakit</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -32,6 +32,9 @@
     <link href="{{ asset('plugins') }}/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{ asset('plugins') }}/bootstrap-select/css/bootstrap-select.css">
+
+    <!-- Select2 css -->
+    <link rel="stylesheet" href="{{ asset('css') }}/select2.min.css">
 
     <!-- Custom Css -->
     <link href="{{ asset('css') }}/style.css" rel="stylesheet">
@@ -101,6 +104,9 @@
 
 <!-- Bootstrap Material Datetime Picker Plugin Js -->
 <script src="{{ asset('plugins') }}/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+<!-- Select2 Js -->
+<script src="{{ asset('js') }}/select2.min.js"></script>
 
 <!-- Custom Js -->
 <script src="{{ asset('js') }}/admin.js"></script>

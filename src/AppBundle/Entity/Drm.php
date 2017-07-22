@@ -25,7 +25,7 @@ class Drm
     private $tglKrs;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     private $tglSetor;
 
@@ -73,7 +73,7 @@ class Drm
      */
     public function setTglMrs($tglMrs)
     {
-        $this->tglMrs = $tglMrs;
+        $this->tglMrs = new \DateTime($tglMrs);
 
         return $this;
     }
@@ -96,7 +96,7 @@ class Drm
      */
     public function setTglKrs($tglKrs)
     {
-        $this->tglKrs = $tglKrs;
+        $this->tglKrs = new \DateTime($tglKrs);
 
         return $this;
     }
@@ -114,12 +114,12 @@ class Drm
     /**
      * Set tglSetor
      *
-     * @param string $tglSetor
+     * @param \DateTime $tglSetor
      * @return Drm
      */
     public function setTglSetor($tglSetor)
     {
-        $this->tglSetor = $tglSetor;
+        $this->tglSetor = new \DateTime($tglSetor);
 
         return $this;
     }
@@ -127,7 +127,7 @@ class Drm
     /**
      * Get tglSetor
      *
-     * @return string 
+     * @return \DateTime
      */
     public function getTglSetor()
     {
@@ -142,7 +142,7 @@ class Drm
      */
     public function setCatatanJam($catatanJam)
     {
-        $this->catatanJam = $catatanJam;
+        $this->catatanJam = new \DateTime($catatanJam);
 
         return $this;
     }

@@ -1,6 +1,6 @@
 {% extends 'subLayout.html.twig' %}
 
-{% block title %}Daftar Pasien{% endblock %}
+{% block title %}Daftar Semua DRM{% endblock %}
 
 {% block content %}
     <div class="container-fluid">
@@ -8,32 +8,24 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <h2><center>Data Pasien</center></h2>
+                        Daftar DRM
                     </div>
                     <div class="body">
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Kode RM</th>
-                                    <th>Nama Pasien</th>
-                                    {% if is_granted('ROLE_ADMIN') %}
-                                        <th>Aksi</th>
-                                    {% endif %}
                                 </tr>
                             </thead>
                             <tbody>
                             {% if data|length > 0 %}
                             {% set i = 1 %}
-                            {% for dat in data %}
-                                <tr>
-                                    <td>{{ i }}</td>
-                                    <td>{{ dat.kodeRm }}</td>
-                                    <td>{{ dat.namaPasien }}</td>
-                                    <td></td>
-                                </tr>
-                                {% set i = i + 1 %}
-                            {% endfor %}
+                                {% for dat in data %}
+                                    <tr>
+                                        <td>{{ i }}</td>
+                                    </tr>
+                                    {% set i = i + 1 %}
+                                {% endfor %}
                             {% else %}
                             {% endif %}
                             </tbody>

@@ -1,0 +1,17 @@
+AppBundle\Entity\Operasi:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\OperasiRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        namaOperasi:
+            type: string
+            length: 255
+            unique: true
+            column: nama_operasi
+    lifecycleCallbacks: {  }

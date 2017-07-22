@@ -12,3 +12,13 @@ app_admin_input_pasien:
     path: /input-pasien
     defaults:
       _controller: AppBundle:Pasien:inputPasien
+
+app_admin_input_drm:
+    path: /input-drm
+    defaults:
+      _controller: AppBundle:Admin:inputDrm
+
+app_admin_daftar_drm:
+    path: /drm
+    defaults:
+      _controller: AppBundle:Admin:getAllDrm

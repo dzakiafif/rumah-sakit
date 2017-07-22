@@ -30,8 +30,6 @@ class PasienController extends Controller
             $pasien->setJamDaftar(date('h:i:s',strtotime($request->get('jam_daftar'))));
             $pasien->setJenisKelamin($request->get('jenis_kelamin'));
 
-//            return var_dump($pasien);
-
             $em->persist($pasien);
             $em->flush();
 
