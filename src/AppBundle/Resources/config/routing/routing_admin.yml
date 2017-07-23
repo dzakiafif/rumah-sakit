@@ -22,3 +22,63 @@ app_admin_daftar_drm:
     path: /drm
     defaults:
       _controller: AppBundle:Admin:getAllDrm
+
+app_admin_input_diagnosa:
+    path: /input-diagnosa
+    defaults:
+      _controller: AppBundle:Diagnosa:inputDiagnosa
+
+app_admin_daftar_diagnosa:
+    path: /diagnosa
+    defaults:
+      _controller: AppBundle:Diagnosa:listDiagnosa
+
+app_admin_input_ruangan:
+    path: /input-ruangan
+    defaults:
+      _controller: AppBundle:Ruangan:inputRuangan
+
+app_admin_daftar_ruangan:
+    path: /ruangan
+    defaults:
+      _controller: AppBundle:Ruangan:listRuangan
+
+app_admin_input_poli:
+    path: /input-poli
+    defaults:
+      _controller: AppBundle:Poli:inputPoli
+
+app_admin_daftar_poli:
+    path: /poli
+    defaults:
+      _controller: AppBundle:Poli:listPoli
+
+app_admin_input_dokter:
+    path: /input-dokter
+    defaults:
+      _controller: AppBundle:Dokter:inputDokter
+
+app_admin_daftar_dokter:
+    path: /dokter
+    defaults:
+      _controller: AppBundle:Dokter:listDokter
+
+app_admin_input_penjamin:
+    path: /input-penjamin
+    defaults:
+      _controller: AppBundle:Penjamin:inputPenjamin
+
+app_admin_daftar_penjamin:
+    path: /penjamin
+    defaults:
+      _controller: AppBundle:Penjamin:daftarPenjamin
+
+app_admin_daftar_filling:
+    path: /filling
+    defaults:
+      _controller: AppBundle:Admin:getAllFilling
+
+app_admin_daftar_peminjaman:
+    path: /peminjaman
+    defaults:
+      _controller: AppBundle:Admin:getAllPeminjaman

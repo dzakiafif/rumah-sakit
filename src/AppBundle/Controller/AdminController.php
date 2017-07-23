@@ -56,4 +56,34 @@ class AdminController extends Controller
 
         return $this->render('AppBundle:drm:list-drm.html.twig',['data'=>$data]);
     }
+
+    public function getAllFillingAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $qb = $em->createQueryBuilder();
+
+        $qb->select('u')->from(Drm::class,'u')->where('u.isValidated = 1');
+
+        $data = $qb->getQuery()->getResult();
+        
+        return $this->render('AppBundle:filling:list-filling.html.twig',[
+            'data'=>$data
+        ]);
+    }
+
+    public function getAllPeminjamanAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $qb = $em->createQueryBuilder();
+
+        $qb->select('u')->from(Drm::class,'u')->where('u.isValidated = 1');
+
+        $data = $qb->getQuery()->getResult();
+
+        return $this->render('AppBundle:peminjaman:list-peminjaman.html.twig',[
+            'data'=>$data
+        ]);
+    }
 }

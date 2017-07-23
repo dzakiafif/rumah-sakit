@@ -306,6 +306,80 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="{{ path('app_admin_daftar_filling') }}"><span>Filling</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-toggle">
+                                <span>Dokter</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_dokter') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_dokter') }}">
+                                        <span>Daftar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-toggle">
+                                <span>Ruangan</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_ruangan') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_ruangan') }}">
+                                        <span>Daftar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-toggle">
+                                <span>Penjamin</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_penjamin') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_penjamin') }}">
+                                        <span>Daftar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-toggle">
+                                <span>Poli</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_poli') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_poli') }}">
+                                        <span>Daftar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_admin_daftar_peminjaman') }}"><span>Peminjaman</span></a>
+                        </li>
                     {% else %}
                         <li class="active">
                             <a href="{{ path('app_user_index') }}">

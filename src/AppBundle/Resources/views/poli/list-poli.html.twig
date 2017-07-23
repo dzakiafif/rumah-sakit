@@ -1,0 +1,54 @@
+{% extends 'subLayout.html.twig' %}
+
+{% block title %}Poli{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><center>Daftar Semua Poli</center></h2>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Poli</th>
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <th>Aksi</th>
+                                    {% endif %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if data|length > 0 %}
+                            {% set i = 1 %}
+                                {% for dat in data %}
+                                    <tr>
+                                        <td>{{ i }}</td>
+                                        <td>{% if dat.namaPoli is not null %}{{ dat.namaPoli }}{% endif %}</td>
+                                        <td></td>
+                                    </tr>
+                                    {% set i = i + 1 %}
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="3"><center>Tidak ada data</center></td>
+                                </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block customJS %}
+    <script>
+        $('.dataTable').dataTable({
+
+        });
+    </script>
+{% endblock %}
