@@ -13,6 +13,16 @@ app_admin_input_pasien:
     defaults:
       _controller: AppBundle:Pasien:inputPasien
 
+app_admin_update_pasien:
+    path: /update-pasien/{id}
+    defaults:
+      _controller: AppBundle:Pasien:updatePasien
+
+app_admin_delete_pasien:
+    path: /delete-pasien/{id}
+    defaults:
+      _controller: AppBundle:Pasien:deletePasien
+
 app_admin_input_drm:
     path: /input-drm
     defaults:

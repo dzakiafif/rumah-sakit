@@ -12,6 +12,6 @@ AppBundle\Entity\Penjamin:
         namaPenjamin:
             type: string
             length: 255
-            unique: false
+            unique: true
             column: nama_penjamin
     lifecycleCallbacks: {  }

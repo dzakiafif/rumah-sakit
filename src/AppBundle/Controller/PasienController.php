@@ -68,7 +68,11 @@ class PasienController extends Controller
 
         if($request->getMethod() == 'POST') {
             if($data instanceof Pasien) {
-
+                $data->setKodeRm($request->get('kode_rm'));
+                $data->setNamaPasien($request->get('nama_pasien'));
+                $data->setAlamatPasien($request->get('alamat_pasien'));
+                $data->setTglLahir(date('Y-m-d',strtotime($request->get('tgl_lahir'))));
+                $data->setJenisKelamin($request->get('jenis_kelamin'));
             }
 
             $em->persist($data);

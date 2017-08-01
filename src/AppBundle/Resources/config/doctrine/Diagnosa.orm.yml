@@ -12,6 +12,6 @@ AppBundle\Entity\Diagnosa:
         namaDiagnosa:
             type: string
             length: 255
-            unique: false
+            unique: true
             column: nama_diagnosa
     lifecycleCallbacks: {  }

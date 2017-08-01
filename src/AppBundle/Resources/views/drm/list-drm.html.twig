@@ -8,13 +8,21 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        Daftar DRM
+                        <h2>
+                            <center>Daftar DRM</center>
+                        </h2>
                     </div>
                     <div class="body">
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Kode RM</th>
+                                    <th>Tanggal KRS</th>
+                                    <th>Ruangan</th>
+                                    <th>DPJP</th>
+                                    <th>Penjamin</th>
+                                    <th>Kelengkapan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,6 +31,18 @@
                                 {% for dat in data %}
                                     <tr>
                                         <td>{{ i }}</td>
+                                        <td>{% if dat.pasien is not null %}{{ dat.pasien.kodeRm }}{% endif %}</td>
+                                        <td>{% if dat.tglKrs is not null %}{{ dat.tglKrs|date('d m Y') }}{% endif %}</td>
+                                        <td>{% if dat.ruangan is not null %}{{ dat.ruangan.namaRuangan }}{% endif %}</td>
+                                        <td>{% if dat.dokter is not null %}{{ dat.dokter.namaDokter }}{% endif %}</td>
+                                        <td>{% if dat.penjamin is not null %}{{ dat.penjamin.namaPenjamin }}{% endif %}</td>
+                                        {% if dat.jenisBerkas == 1 %}
+                                            <td><span class="label label-success">Lengkap</span></td>
+                                        {% elseif dat.jenisBerkas == 2 %}
+                                            <td><span class="label label-success">Tidak Lengkap</span></td>
+                                        {% else %}
+                                            <td><span class="label label-success">Peminjaman</span></td>
+                                        {% endif %}
                                     </tr>
                                     {% set i = i + 1 %}
                                 {% endfor %}

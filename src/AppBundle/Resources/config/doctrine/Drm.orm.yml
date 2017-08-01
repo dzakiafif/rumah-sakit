@@ -8,39 +8,41 @@ AppBundle\Entity\Drm:
             id: true
             generator:
                 strategy: AUTO
-    oneToOne:
-         diagnosaId:
+    manyToOne:
+         diagnosa:
                 targetEntity: Diagnosa
                 joinColumn:
-                  name: diagnosa_id
+                  name: diagnosa
                   referencedColumnName: id
-                  unique: false
+                  onDelete: "SET NULL"
          pasien:
                 targetEntity: Pasien
                 joinColumn:
                   name: pasien
                   referencedColumnName: id
-                  unique: false
+                  onDelete: "SET NULL"
 
          penjamin:
                targetEntity: Penjamin
                joinColumn:
                   name: penjamin
                   referencedColumnName: id
-                  unique: false
+                  onDelete: "SET NULL"
 
          dokter:
               targetEntity: Dokter
               joinColumn:
                   name: dokter
                   referencedColumnName: id
-                  unique: false
+                  onDelete: "SET NULL"
+
          ruangan:
               targetEntity: Ruangan
               joinColumn:
                   name: ruangan
                   referencedColumnName: id
-                  unique: false
+                  onDelete: "SET NULL"
+
     fields:
         tglMrs:
             type: datetime
@@ -52,12 +54,16 @@ AppBundle\Entity\Drm:
             type: datetime
             column: tgl_setor
         catatanJam:
-            type: time
+            type: integer
             column: catatan_jam
         kondisiPulang:
             type: string
             length: 255
             column: kondisi_pulang
+        rujukan:
+            type: string
+            length: 255
+            nullable: true
         operasi:
             type: integer
         jenisOperasi:

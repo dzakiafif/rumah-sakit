@@ -22,7 +22,7 @@ class Drm
     /**
      * @var int
      */
-    private $diagnosaId;
+    private $diagnosa;
 
     /**
      * @var int
@@ -54,7 +54,7 @@ class Drm
     private $tglSetor;
 
     /**
-     * @var string
+     * @var int
      */
     private $catatanJam;
 
@@ -72,6 +72,11 @@ class Drm
      * @var int
      */
     private $jenisOperasi;
+
+    /**
+     * @var string
+     */
+    private $rujukan;
 
     /**
      * @var int
@@ -141,12 +146,12 @@ class Drm
     }
 
     /**
-     * @param int $diagnosaId
+     * @param int $diagnosa
      * @return Drm
      */
-    public function setDiagnosaId(Diagnosa $diagnosaId)
+    public function setDiagnosa(Diagnosa $diagnosa)
     {
-        $this->diagnosaId = $diagnosaId;
+        $this->diagnosa = $diagnosa;
 
         return $this;
     }
@@ -154,9 +159,9 @@ class Drm
     /**
      * @return int
      */
-    public function getDiagnosaId()
+    public function getDiagnosa()
     {
-        return $this->diagnosaId;
+        return $this->diagnosa;
     }
 
     /**
@@ -257,12 +262,12 @@ class Drm
     /**
      * Set catatanJam
      *
-     * @param string $catatanJam
+     * @param integer $catatanJam
      * @return Drm
      */
     public function setCatatanJam($catatanJam)
     {
-        $this->catatanJam = new \DateTime($catatanJam);
+        $this->catatanJam = $catatanJam;
 
         return $this;
     }
@@ -270,7 +275,7 @@ class Drm
     /**
      * Get catatanJam
      *
-     * @return string 
+     * @return int
      */
     public function getCatatanJam()
     {
@@ -344,6 +349,23 @@ class Drm
     public function getJenisOperasi()
     {
         return $this->jenisOperasi;
+    }
+
+
+    /**
+     * @param string $rujukan
+     * @return Drm
+     */
+    public function setRujukan($rujukan)
+    {
+        $this->rujukan = $rujukan;
+
+        return $this;
+    }
+
+    public function getRujukan()
+    {
+        return $this->rujukan;
     }
 
     /**

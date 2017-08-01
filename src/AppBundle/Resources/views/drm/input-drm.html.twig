@@ -41,10 +41,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" name="catatan_jam" id="" class="form-control">
-                                    <label class="form-label">Jam</label>
-                                </div>
+                                <select name="catatan_jam" class="form-control" id="">
+                                    <option value="">-- Pilih Jam --</option>
+                                    <option value="1"> < 48 Jam</option>
+                                    <option value="2"> > 48 jam </option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <p>Kondisi Pulang</p>
@@ -56,6 +57,12 @@
                                     <option value="4">Lari</option>
                                     <option value="5">Meninggal Dunia</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" name="rujukan" id="" class="form-control">
+                                    <label class="form-label">Rujukan</label>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <p>Penjamin</p>
@@ -77,7 +84,7 @@
                             </div>
                             <div class="form-group">
                                 <p>Diagnosa</p>
-                                <select name="diagnosa" id="" class="form-control">
+                                <select name="diagnosa" id="" class="select2 form-control">
                                     <option value="">-- Pilih Diagnosa --</option>
                                     {% for item in diagnosa %}
                                         <option value="{{ item.id }}">{{ item.namaDiagnosa }}</option>

@@ -49,13 +49,14 @@ class AdminController extends Controller
             $drm->setTglMrs(date('Y-m-d',strtotime($request->get('tgl_mrs'))));
             $drm->setTglKrs(date('Y-m-d',strtotime($request->get('tgl_krs'))));
             $drm->setTglSetor(date('Y-m-d',strtotime($request->get('tgl_setor'))));
-            $drm->setCatatanJam(date('h:i',strtotime($request->get('catatan_jam'))));
+            $drm->setCatatanJam($request->get('catatan_jam'));
             $drm->setPasien($em->getRepository(Pasien::class)->find($request->get('pasien')));
-            $drm->setDiagnosaId($em->getRepository(Diagnosa::class)->find($request->get('diagnosa')));
+            $drm->setDiagnosa($em->getRepository(Diagnosa::class)->find($request->get('diagnosa')));
             $drm->setPenjamin($em->getRepository(Penjamin::class)->find($request->get('penjamin')));
             $drm->setDokter($em->getRepository(Dokter::class)->find($request->get('dokter')));
             $drm->setRuangan($em->getRepository(Ruangan::class)->find($request->get('ruangan')));
             $drm->setKondisiPulang($request->get('kondisi_pulang'));
+            $drm->setRujukan($request->get('rujukan'));
             $drm->setOperasi($request->get('operasi'));
             $drm->setJenisBerkas($request->get('jenis_berkas'));
 
