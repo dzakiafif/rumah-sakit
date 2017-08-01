@@ -29,9 +29,11 @@ AppBundle\Entity\Pasien:
         tanggalDaftar:
             type: date
             column: tanggal_daftar
+            nullable: true
         jamDaftar:
             type: time
             column: jam_daftar
+            nullable: true
         jenisKelamin:
             type: integer
             nullable: true
