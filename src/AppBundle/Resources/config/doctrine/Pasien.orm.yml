@@ -13,6 +13,7 @@ AppBundle\Entity\Pasien:
             type: string
             length: '20'
             column: kode_rm
+            unique: false
         namaPasien:
             type: string
             length: '100'
