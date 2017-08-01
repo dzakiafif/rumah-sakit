@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a981a907-a86f-4bfd-81ef-dc65a8ca5599" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/update-diagnosa.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/list-klpcm.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/penjamin/update-penjamin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/poli/update-poli.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/ruangan/update-ruangan.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DiagnosaController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DiagnosaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PenjaminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PenjaminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PoliController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PoliController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RuanganController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RuanganController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Drm.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Drm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Drm.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Drm.orm.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/routing_admin.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/routing_admin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/input-diagnosa.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/input-diagnosa.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/list-diagnosa.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/list-diagnosa.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/list-dokter.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/list-dokter.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/update-dokter.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/update-dokter.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/drm/input-drm.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/drm/input-drm.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/filling/list-filling.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/filling/list-filling.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/penjamin/list-penjamin.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/penjamin/list-penjamin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/poli/list-poli.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/poli/list-poli.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig" />
     </list>
     <ignored path="dita.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
+      <file leaf-file-name="input-pasien.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="44">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subLayout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/subLayout.html.twig">
+      <file leaf-file-name="PasienController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="346" column="45" selection-start-line="346" selection-start-column="45" selection-end-line="346" selection-end-column="45" />
+            <state relative-caret-position="228">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -106,16 +82,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
               <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-              <folding />
+              <folding>
+                <marker date="1501553986400" expanded="true" signature="75:2683" ph="{% block content ...%}" />
+                <marker date="1501553986400" expanded="true" signature="1167:2503" ph="{% if data|length &gt; 0 ...%}" />
+                <marker date="1501553986400" expanded="true" signature="1272:2260" ph="{% for dat in data ...%}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list-peminjaman.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list-peminjaman.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+            <state relative-caret-position="23">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -173,8 +153,6 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/update-pasien.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Pasien.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/pasien.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/OperasiController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/drm/list-drm.html.twig" />
@@ -210,6 +188,8 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/filling/list-filling.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/list-klpcm.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig" />
       </list>
     </option>
   </component>
@@ -942,12 +922,12 @@
       <workItem from="1501420631327" duration="3636000" />
       <workItem from="1501482172560" duration="18359000" />
       <workItem from="1501515056751" duration="69000" />
-      <workItem from="1501551134544" duration="3071000" />
+      <workItem from="1501551134544" duration="4277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96609000" />
+    <option name="totallyTimeSpent" value="97815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -1243,14 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Dokter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1279,14 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="346" column="45" selection-start-line="346" selection-start-column="45" selection-end-line="346" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1329,7 +1293,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-          <folding />
+          <folding>
+            <marker date="1501553986400" expanded="true" signature="75:2683" ph="{% block content ...%}" />
+            <marker date="1501553986400" expanded="true" signature="1167:2503" ph="{% if data|length &gt; 0 ...%}" />
+            <marker date="1501553986400" expanded="true" signature="1272:2260" ph="{% for dat in data ...%}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1351,8 +1319,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/input-pasien.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="50" />
           <folding />
         </state>
       </provider>

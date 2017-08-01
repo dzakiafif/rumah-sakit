@@ -26,8 +26,6 @@ class PasienController extends Controller
             $pasien->setNamaPasien($request->get('nama_pasien'));
             $pasien->setTglLahir(date('Y-m-d',strtotime($request->get('tgl_lahir'))));
             $pasien->setAlamatPasien($request->get('alamat_pasien'));
-            $pasien->setTanggalDaftar(date('Y-m-d',strtotime($request->get('tgl_daftar'))));
-            $pasien->setJamDaftar(date('h:i:s',strtotime($request->get('jam_daftar'))));
             $pasien->setJenisKelamin($request->get('jenis_kelamin'));
 
             $em->persist($pasien);
