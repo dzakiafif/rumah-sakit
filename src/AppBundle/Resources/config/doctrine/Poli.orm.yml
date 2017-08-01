@@ -12,6 +12,6 @@ AppBundle\Entity\Poli:
         namaPoli:
             type: string
             length: 255
-            unique: true
+            unique: false
             column: nama_poli
     lifecycleCallbacks: {  }

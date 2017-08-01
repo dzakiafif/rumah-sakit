@@ -12,6 +12,6 @@ AppBundle\Entity\Dokter:
         namaDokter:
             type: string
             length: '255'
-            unique: true
+            unique: false
             column: nama_dokter
     lifecycleCallbacks: {  }

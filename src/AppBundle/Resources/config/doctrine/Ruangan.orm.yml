@@ -12,6 +12,6 @@ AppBundle\Entity\Ruangan:
         namaRuangan:
             type: string
             length: 255
-            unique: true
+            unique: false
             column: nama_ruangan
     lifecycleCallbacks: {  }

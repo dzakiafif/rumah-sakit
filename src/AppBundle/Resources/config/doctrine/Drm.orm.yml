@@ -14,28 +14,33 @@ AppBundle\Entity\Drm:
                 joinColumn:
                   name: diagnosa_id
                   referencedColumnName: id
+                  unique: false
          pasien:
                 targetEntity: Pasien
                 joinColumn:
                   name: pasien
                   referencedColumnName: id
+                  unique: false
 
          penjamin:
                targetEntity: Penjamin
                joinColumn:
                   name: penjamin
                   referencedColumnName: id
+                  unique: false
 
          dokter:
               targetEntity: Dokter
               joinColumn:
                   name: dokter
                   referencedColumnName: id
+                  unique: false
          ruangan:
               targetEntity: Ruangan
               joinColumn:
                   name: ruangan
                   referencedColumnName: id
+                  unique: false
     fields:
         tglMrs:
             type: datetime

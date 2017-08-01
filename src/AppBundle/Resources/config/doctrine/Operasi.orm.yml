@@ -12,6 +12,5 @@ AppBundle\Entity\Operasi:
         namaOperasi:
             type: string
             length: 255
-            unique: true
             column: nama_operasi
     lifecycleCallbacks: {  }
