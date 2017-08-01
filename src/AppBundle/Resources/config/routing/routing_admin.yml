@@ -33,6 +33,16 @@ app_admin_daftar_diagnosa:
     defaults:
       _controller: AppBundle:Diagnosa:listDiagnosa
 
+app_admin_update_diagnosa:
+    path: /update-diagnosa/{id}
+    defaults:
+      _controller: AppBundle:Diagnosa:updateDiagnosa
+
+app_admin_delete_diagnosa:
+    path: /delete-diagnosa/{id}
+    defaults:
+      _controller: AppBundle:Diagnosa:deleteDiagnosa
+
 app_admin_input_ruangan:
     path: /input-ruangan
     defaults:
@@ -82,3 +92,48 @@ app_admin_daftar_peminjaman:
     path: /peminjaman
     defaults:
       _controller: AppBundle:Admin:getAllPeminjaman
+
+app_admin_update_dokter:
+    path: /update-dokter/{id}
+    defaults:
+      _controller: AppBundle:Dokter:updateDokter
+
+app_admin_delete_dokter:
+    path: /delete-dokter/{id}
+    defaults:
+      _controller: AppBundle:Dokter:deleteDokter
+
+app_admin_update_ruangan:
+    path: /update-ruangan/{id}
+    defaults:
+      _controller: AppBundle:Ruangan:updateRuangan
+
+app_admin_delete_ruangan:
+    path: /delete-ruangan/{id}
+    defaults:
+      _controller: AppBundle:Ruangan:deleteRuangan
+
+app_admin_update_penjamin:
+    path: /update-penjamin/{id}
+    defaults:
+      _controller: AppBundle:Penjamin:updatePenjamin
+
+app_admin_delete_penjamin:
+    path: /delete-penjamin/{id}
+    defaults:
+      _controller: AppBundle:Penjamin:deletePenjamin
+
+app_admin_update_poli:
+    path: /update-poli/{id}
+    defaults:
+      _controller: AppBundle:Poli:updatePoli
+
+app_admin_delete_poli:
+    path: /delete-poli/{id}
+    defaults:
+      _controller: AppBundle:Poli:deletePoli
+
+app_admin_list_klpcm:
+    path: /klpcm
+    defaults:
+      _controller: AppBundle:Admin:getAllKlpcm

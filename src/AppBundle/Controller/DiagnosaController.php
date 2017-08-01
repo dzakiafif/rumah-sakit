@@ -41,4 +41,38 @@ class DiagnosaController extends Controller
         return $this->render('AppBundle:diagnosa:list-diagnosa.html.twig',['data'=>$data]);
     }
 
+    public function deleteDiagnosaAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Diagnosa::class)->find($id);
+
+        $em->remove($data);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('app_admin_daftar_diagnosa'));
+    }
+
+    public function updateDiagnosaAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Diagnosa::class)->find($id);
+
+        if($request->getMethod() == 'POST') {
+            if($data instanceof Diagnosa) {
+                $data->setNamaDiagnosa($request->get('diagnosa'));
+            }
+
+            $em->persist($data);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_daftar_diagnosa'));
+        }
+
+        return $this->render('AppBundle:diagnosa:update-diagnosa.html.twig',[
+            'data' => $data
+        ]);
+    }
+
 }

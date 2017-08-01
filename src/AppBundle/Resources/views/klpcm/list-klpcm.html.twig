@@ -1,5 +1,7 @@
 {% extends 'subLayout.html.twig' %}
 
+{% block title %}KLPCM{% endblock %}
+
 {% block content %}
     <div class="container-fluid">
         <div class="row clearfix">
@@ -7,32 +9,31 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            <center>Daftar Semua Peminjaman</center>
+                            <center>Daftar Seluruh Data KLPCM</center>
                         </h2>
                     </div>
                     <div class="body">
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Kode RM</th>
-                                    <th>Kode RM</th>
-                                    <th>Nama Pasien</th>
-                                    <th>Tanggal KRS</th>
-                                    <th>Ruangan</th>
-                                    <th>DPJP</th>
-                                    <th>Penjamin</th>
-                                </tr>
+                            <tr>
+                                <th>No.</th>
+                                <th>Kode RM</th>
+                                <th>Nama Pasien</th>
+                                <th>Tanggal Setor</th>
+                                <th>Ruangan</th>
+                                <th>DPJP</th>
+                                <th>Penjamin</th>
+                            </tr>
                             </thead>
                             <tbody>
                             {% if data|length > 0 %}
-                            {% set i = 1 %}
+                                {% set i = 1 %}
                                 {% for dat in data %}
                                     <tr>
                                         <td>{{ i }}</td>
                                         <td>{% if dat.pasien is not null %}{{ dat.pasien.kodeRm }}{% endif %}</td>
                                         <td>{% if dat.pasien is not null %}{{ dat.pasien.namaPasien }}{% endif %}</td>
-                                        <td>{% if dat.tglKrs is not null %}{{ dat.tglKrs|date('d m Y') }}{% endif %}</td>
+                                        <td>{% if dat.tglSetor is not null %}{{ dat.tglSetor|date('d m Y') }}{% endif %}</td>
                                         <td>{% if dat.ruangan is not null %}{{ dat.ruangan.namaRuangan }}{% endif %}</td>
                                         <td>{% if dat.dokter is not null %}{{ dat.dokter.namaDokter }}{% endif %}</td>
                                         <td>{% if dat.penjamin is not null %}{{ dat.penjamin.namaPenjamin }}{% endif %}</td>
@@ -41,7 +42,7 @@
                                 {% endfor %}
                             {% else %}
                                 <tr>
-                                    <td colspan="8"><center>Tidak ada data</center></td>
+                                    <td colspan="7"><center>Tidak Ada Data</center></td>
                                 </tr>
                             {% endif %}
                             </tbody>

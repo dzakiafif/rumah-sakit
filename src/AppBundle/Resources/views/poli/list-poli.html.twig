@@ -28,7 +28,12 @@
                                     <tr>
                                         <td>{{ i }}</td>
                                         <td>{% if dat.namaPoli is not null %}{{ dat.namaPoli }}{% endif %}</td>
-                                        <td></td>
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <td>
+                                                <a title="Update data poli" href="{{ path('app_admin_update_poli',{id: dat.id}) }}" class="btn btn-primary btn-xs">EDIT</a>
+                                                <a title="Delete data poli" href="{{ path('app_admin_delete_poli',{id: dat.id}) }}" class="btn btn-danger btn-xs">DELETE</a>
+                                            </td>
+                                        {% endif %}
                                     </tr>
                                     {% set i = i + 1 %}
                                 {% endfor %}

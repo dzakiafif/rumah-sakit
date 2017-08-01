@@ -8,6 +8,34 @@ AppBundle\Entity\Drm:
             id: true
             generator:
                 strategy: AUTO
+    oneToOne:
+         diagnosaId:
+                targetEntity: Diagnosa
+                joinColumn:
+                  name: diagnosa_id
+                  referencedColumnName: id
+         pasien:
+                targetEntity: Pasien
+                joinColumn:
+                  name: pasien
+                  referencedColumnName: id
+
+         penjamin:
+               targetEntity: Penjamin
+               joinColumn:
+                  name: penjamin
+                  referencedColumnName: id
+
+         dokter:
+              targetEntity: Dokter
+              joinColumn:
+                  name: dokter
+                  referencedColumnName: id
+         ruangan:
+              targetEntity: Ruangan
+              joinColumn:
+                  name: ruangan
+                  referencedColumnName: id
     fields:
         tglMrs:
             type: datetime
@@ -30,7 +58,12 @@ AppBundle\Entity\Drm:
         jenisOperasi:
             type: integer
             column: jenis_operasi
+            nullable: true
+        jenisBerkas:
+            type: integer
+            column: jenis_berkas
         isValidated:
             type: integer
             column: is_validated
+            nullable: true
     lifecycleCallbacks: {  }

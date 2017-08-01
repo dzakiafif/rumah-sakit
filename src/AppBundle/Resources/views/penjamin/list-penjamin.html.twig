@@ -1,5 +1,7 @@
 {% extends 'subLayout.html.twig' %}
 
+{% block title %}Penjamin{% endblock %}
+
 {% block content %}
     <div class="container-fluid">
         <div class="row clearfix">
@@ -16,6 +18,9 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Nama Penjamin</th>
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <th>Aksi</th>
+                                    {% endif %}
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,6 +30,12 @@
                                     <tr>
                                         <td>{{ i }}</td>
                                         <td>{% if dat.namaPenjamin is not null %}{{ dat.namaPenjamin }}{% endif %}</td>
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <td>
+                                                <a title="Update data penjamin" href="{{ path('app_admin_update_penjamin',{id: dat.id}) }}" class="btn btn-primary btn-xs">EDIT</a>
+                                                <a title="Delete data penjamin" href="{{ path('app_admin_delete_penjamin',{id: dat.id}) }}" class="btn btn-danger btn-xs">DELETE</a>
+                                            </td>
+                                        {% endif %}
                                     </tr>
                                     {% set i = i + 1 %}
                                 {% endfor %}

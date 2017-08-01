@@ -30,7 +30,12 @@
                                    <tr>
                                        <td>{{ i }}</td>
                                        <td>{{ dat.namaDokter }}</td>
-                                       <td></td>
+                                       {% if is_granted('ROLE_ADMIN') %}
+                                           <td>
+                                               <a title="update data dokter" href="{{ path('app_admin_update_dokter',{id: dat.id}) }}" class="btn btn-primary btn-xs">EDIT</a>
+                                               <a title="delete data dokter" href="{{ path('app_admin_delete_dokter',{id: dat.id}) }}" class="btn btn-danger btn-xs">DELETE</a>
+                                           </td>
+                                       {% endif %}
                                    </tr>
                                    {% set i = i + 1 %}
                                {% endfor %}

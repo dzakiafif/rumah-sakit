@@ -1,6 +1,6 @@
 {% extends 'subLayout.html.twig' %}
 
-{% block title %}Dokter{% endblock %}
+{% block title %}Diagnosa{% endblock %}
 
 {% block content %}
     <div class="container-fluid">
@@ -9,18 +9,18 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            <center>Update Data Dokter</center>
+                            <center>Update data diagnosa</center>
                         </h2>
                     </div>
                     <div class="body">
                         <form method="post">
-                            <div class="form-group form-float">
+                            <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="nama_dokter" id="" class="form-control" value="{% if data.namaDokter is not null %}{{ data.namaDokter }}{% endif %}">
-                                    <label class="form-label">Nama Dokter</label>
+                                    <input type="text" name="diagnosa" id="" class="form-control" value="{% if data.namaDiagnosa is not null %}{{ data.namaDiagnosa }}{% endif %}">
+                                    <label for="label form-label">Nama Diagnosa</label>
                                 </div>
-                                <button class="btn btn-primary waves-effect">SUBMIT</button>
                             </div>
+                            <buttton class="btn btn-primary waves-effect">SUBMIT</buttton>
                         </form>
                     </div>
                 </div>

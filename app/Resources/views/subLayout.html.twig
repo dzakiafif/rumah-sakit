@@ -344,6 +344,9 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="{{ path('app_admin_list_klpcm') }}"><span>KLPCM</span></a>
+                        </li>
+                        <li>
                             <a href="#" class="menu-toggle">
                                 <span>Penjamin</span>
                             </a>
@@ -355,6 +358,23 @@
                                 </li>
                                 <li>
                                     <a href="{{ path('app_admin_daftar_penjamin') }}">
+                                        <span>Daftar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-toggle">
+                                <span>Diagnosa</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{ path('app_admin_input_diagnosa') }}">
+                                        <span>Input</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_admin_daftar_diagnosa') }}">
                                         <span>Daftar</span>
                                     </a>
                                 </li>
@@ -718,14 +738,14 @@
             </div>
             <!-- #Menu -->
             <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                    &copy; 2016 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0.4
-                </div>
-            </div>
+            {#<div class="legal">#}
+                {#<div class="copyright">#}
+                    {#&copy; 2016 <a href="javascript:void(0);">AdminBSB - Material Design</a>.#}
+                {#</div>#}
+                {#<div class="version">#}
+                    {#<b>Version: </b> 1.0.4#}
+                {#</div>#}
+            {#</div>#}
             <!-- #Footer -->
         </aside>
         <!-- #END# Left Sidebar -->

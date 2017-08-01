@@ -20,6 +20,30 @@ class Drm
     private $tglMrs;
 
     /**
+     * @var int
+     */
+    private $diagnosaId;
+
+    /**
+     * @var int
+     */
+    private $pasien;
+
+    /**
+     * @var int
+     */
+    private $penjamin;
+
+    /**
+     * @var int
+     */
+    private $dokter;
+
+    /**
+     * @var int
+     */
+    private $ruangan;
+    /**
      * @var \DateTime
      */
     private $tglKrs;
@@ -48,6 +72,11 @@ class Drm
      * @var int
      */
     private $jenisOperasi;
+
+    /**
+     * @var int
+     */
+    private $jenisBerkas;
 
     /**
      * @var int
@@ -111,6 +140,97 @@ class Drm
         return $this->tglKrs;
     }
 
+    /**
+     * @param int $diagnosaId
+     * @return Drm
+     */
+    public function setDiagnosaId(Diagnosa $diagnosaId)
+    {
+        $this->diagnosaId = $diagnosaId;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiagnosaId()
+    {
+        return $this->diagnosaId;
+    }
+
+    /**
+     * @param $pasien
+     * @return Drm
+     */
+    public function setPasien(Pasien $pasien)
+    {
+        $this->pasien = $pasien;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPasien()
+    {
+        return $this->pasien;
+    }
+
+    /**
+     * @param $penjamin
+     * @return $this
+     */
+    public function setPenjamin($penjamin)
+    {
+        $this->penjamin = $penjamin;
+
+        return $this;
+    }
+
+    public function getPenjamin()
+    {
+        return $this->penjamin;
+    }
+
+    /**
+     * @param integer $dokter
+     * @return Drm
+     */
+    public function setDokter($dokter)
+    {
+        $this->dokter = $dokter;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDokter()
+    {
+        return $this->dokter;
+    }
+
+    /**
+     * @param integer $ruangan
+     * @return Drm
+     */
+    public function setRuangan($ruangan)
+    {
+        $this->ruangan = $ruangan;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRuangan()
+    {
+       return $this->ruangan;
+    }
     /**
      * Set tglSetor
      *
@@ -224,6 +344,25 @@ class Drm
     public function getJenisOperasi()
     {
         return $this->jenisOperasi;
+    }
+
+    /**
+     * @param integer @jenisBerkas
+     * @return Drm
+     */
+    public function setJenisBerkas($jenisBerkas)
+    {
+        $this->jenisBerkas = $jenisBerkas;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getJenisBerkas()
+    {
+        return $this->jenisBerkas;
     }
 
     /**

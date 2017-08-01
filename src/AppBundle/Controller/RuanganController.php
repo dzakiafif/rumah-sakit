@@ -43,4 +43,36 @@ class RuanganController extends Controller
         return $this->render('AppBundle:ruangan:list-ruangan.html.twig',['data'=>$data]);
     }
 
+    public function updateRuanganAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Ruangan::class)->find($id);
+
+        if($request->getMethod() == 'POST') {
+            if($data instanceof Ruangan) {
+                $data->setNamaRuangan($request->get('nama_ruangan'));
+            }
+            $em->persist($data);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_daftar_ruangan'));
+        }
+
+        return $this->render('AppBundle:ruangan:update-ruangan.html.twig',['data'=>$data]);
+    }
+
+    public function deleteRuanganAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Ruangan::class)->find($id);
+
+        $em->remove($data);
+
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('app_admin_daftar_ruangan'));
+    }
+
 }

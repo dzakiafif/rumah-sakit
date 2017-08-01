@@ -1,0 +1,61 @@
+{% extends 'subLayout.html.twig' %}
+
+{% block title %}Diagnosa{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            <center>Daftar Seluruh Data Diagnosa</center>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama Diagnosa</th>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <th>Aksi</th>
+                                {% endif %}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if data|length > 0 %}
+                                {% set i = 1 %}
+                                {% for dat in data %}
+                                    <tr>
+                                        <td>{{ i }}</td>
+                                        <td>{% if dat.namaDiagnosa is not null %}{{ dat.namaDiagnosa }}{% endif %}</td>
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <td>
+                                                <a title="Update data diagnosa" href="{{ path('app_admin_update_diagnosa',{id: dat.id}) }}" class="btn btn-primary btn-xs">EDIT</a>
+                                                <a title="delete data ruangan" href="{{ path('app_admin_delete_diagnosa',{id: dat.id}) }}" class="btn btn-danger btn-xs">DELETE</a>
+                                            </td>
+                                        {% endif %}
+                                    </tr>
+                                    {% set i = i + 1 %}
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="3"><center>Tidak Ada Data</center></td>
+                                </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block customJS %}
+    <script>
+        $('.dataTable').dataTable({
+
+        });
+    </script>
+{% endblock %}

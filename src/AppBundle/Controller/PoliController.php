@@ -26,6 +26,8 @@ class PoliController extends Controller
             
             $em->persist($poli);
             $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_daftar_poli'));
         }
         
         return $this->render('AppBundle:poli:input-poli.html.twig');
@@ -38,6 +40,39 @@ class PoliController extends Controller
         $data = $em->getRepository(Poli::class)->findAll();
 
         return $this->render('AppBundle:poli:list-poli.html.twig',['data'=>$data]);
+    }
+
+    public function updatePoliAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Poli::class)->find($id);
+
+        if($request->getMethod() == 'POST') {
+            if($data instanceof Poli) {
+                $data->setNamaPoli($request->get('nama_poli'));
+            }
+
+            $em->persist($data);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_daftar_poli'));
+        }
+
+        return $this->render('AppBundle:poli:update-poli.html.twig',['data'=>$data]);
+    }
+
+    public function deletePoliAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Poli::class)->find($id);
+
+        $em->remove($data);
+
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('app_admin_daftar_poli'));
     }
 
 }

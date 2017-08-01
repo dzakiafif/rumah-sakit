@@ -15,6 +15,14 @@
                     <div class="body">
                         <form method="post">
                             <div class="form-group">
+                                <select name="pasien" id="" class="select2 form-control">
+                                    <option value="">-- Pilih kode RM Pasien</option>
+                                    {% for item in pasien %}
+                                        <option value="{{ item.id }}">{{ item.kodeRm }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <div class="form-line">
                                     <input type="text" name="tgl_mrs" id="" class="datepicker form-control">
                                     <label class="form-label">Tanggal MRS</label>
@@ -34,17 +42,72 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="catatan_jam" id="" class="timepicker form-control">
+                                    <input type="text" name="catatan_jam" id="" class="form-control">
                                     <label class="form-label">Jam</label>
                                 </div>
                             </div>
                             <div class="form-group">
+                                <p>Kondisi Pulang</p>
+                                <select name="kondisi_pulang" id="" class="form-control">
+                                    <option value="">-- Pilih Kondisi Pulang --</option>
+                                    <option value="1">Sembuh</option>
+                                    <option value="2">PAPS</option>
+                                    <option value="3">Rujuk</option>
+                                    <option value="4">Lari</option>
+                                    <option value="5">Meninggal Dunia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p>Penjamin</p>
+                                <select name="penjamin" id="" class="form-control">
+                                    <option value="">-- Pilih Penjamin --</option>
+                                    {% for item in penjamin %}
+                                        <option value="{{ item.id }}">{{ item.namaPenjamin }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p>DPJP</p>
+                                <select name="dokter" id="" class="form-control">
+                                    <option value="">-- Pilih Dokter --</option>
+                                    {% for item in dokter %}
+                                        <option value="{{ item.id }}">{{ item.namaDokter }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <p>Diagnosa</p>
-                                <select name="" id="" class="select2 form-control">
+                                <select name="diagnosa" id="" class="form-control">
                                     <option value="">-- Pilih Diagnosa --</option>
-                                    <option value="1">Sakit Kepala</option>
-                                    <option value="2">Tifus</option>
-                                    <option value="3">Panas</option>
+                                    {% for item in diagnosa %}
+                                        <option value="{{ item.id }}">{{ item.namaDiagnosa }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p>Ruangan</p>
+                                <select name="ruangan" id="" class="form-control">
+                                    <option value="">-- Pilih Ruangan --</option>
+                                    {% for item in ruangan %}
+                                        <option value="{{ item.id }}">{{ item.namaRuangan }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p>Operasi</p>
+                                <select name="operasi" id="" class="form-control">
+                                    <option value="">-- Pilih Operasi --</option>
+                                    <option value="1">Ya</option>
+                                    <option value="2">Tidak</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <p>Jenis Berkas</p>
+                                <select name="jenis_berkas" id="" class="form-control">
+                                    <option value="">-- Pilih Jenis Berkas --</option>
+                                    <option value="1">Lengkap</option>
+                                    <option value="2">Tidak Lengkap</option>
+                                    <option value="3">Peminjaman</option>
                                 </select>
                             </div>
                             <button class="btn btn-primary waves-effect">SUBMIT</button>
@@ -57,7 +120,6 @@
 {% endblock %}
 {% block customJS %}
     <script>
-
         $('.datepicker').bootstrapMaterialDatePicker({
            weekStart: 0,
            time: false
