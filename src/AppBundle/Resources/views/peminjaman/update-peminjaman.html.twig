@@ -14,43 +14,43 @@
                         <form method="post">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="nama_peminjam" class="form-control">
+                                    <input type="text" name="nama_peminjam" class="form-control" value="{% if peminjam.namaPeminjam is not null %}{{ peminjam.namaPeminjam }}{% endif %}">
                                     <label for="">Nama Peminjam</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="petugas" class="form-control">
+                                    <input type="text" name="petugas" class="form-control" value="{% if peminjam.petugasRekamMedis is not null %}{{ peminjam.petugasRekamMedis }}{% endif %}">
                                     <label for="">Nama Petugas</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="nama_pengembalian" class="form-control">
+                                    <input type="text" name="nama_pengembalian" class="form-control" value="{% if peminjam.namaPengembalian is not null %}{{ peminjam.namaPengembalian }}{% endif %}">
                                     <label for="">Nama Pengembalian</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <p>Tanggal Peminjaman</p>
                                 <div class="form-line">
-                                    <input type="text" name="tgl_peminjam" class="datepicker form-control">
+                                    <input type="text" name="tgl_peminjam" class="datepicker form-control" value="{% if peminjam.tglPeminjaman is not null %}{{ peminjam.tglPeminjaman|date('d m Y') }}{% endif %}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <p>Tanggal Kembali</p>
                                 <div class="form-line">
-                                    <input type="text" name="tgl_pengembalian" class="datepicker form-control">
+                                    <input type="text" name="tgl_pengembalian" class="datepicker form-control" value="{% if peminjam.tglKembali is not null %}{{ peminjam.tglKembali|date('d m Y') }}{% endif %}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="unit_peminjam" class="form-control">
+                                    <input type="text" name="unit_peminjam" class="form-control" value="{% if peminjam.unitPeminjam is not null %}{{ peminjam.unitPeminjam }}{% endif %}">
                                     <label for="">Unit Peminjam</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="unit_pengembalian" class="fomr-control">
+                                    <input type="text" name="unit_pengembalian" class="fomr-control" value="{% if peminjam.unitPengembalian is not null %}{{ peminjam.unitPengembalian }}{% endif %}">
                                     <label for="">Unit Pengembalian</label>
                                 </div>
                             </div>

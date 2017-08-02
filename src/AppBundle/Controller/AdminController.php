@@ -185,7 +185,8 @@ class AdminController extends Controller
 
         return $this->render('AppBundle:klpcm:update-klpcm.html.twig',[
             'klpcm'=>$klpcm,
-            'poli' => $poli
+            'poli' => $poli,
+            'drm' => $drm
         ]);
     }
 
@@ -221,6 +222,17 @@ class AdminController extends Controller
                 $peminjaman->setNamaPengembalian($request->get('nama_pengembalian'));
                 $peminjaman->setUnitPeminjam($request->get('unit_peminjam'));
                 $peminjaman->setUnitPengembalian($request->get('unit_pengembalian'));
+            }else {
+                if($peminjaman instanceof Peminjaman) {
+                    $peminjaman->setDrm($drm);
+                    $peminjaman->setNamaPeminjam($request->get('nama_peminjam'));
+                    $peminjaman->setPetugasRekamMedis($request->get('petugas'));
+                    $peminjaman->setTglPeminjaman(date('Y-m-d',strtotime($request->get('tgl_peminjam'))));
+                    $peminjaman->setTglKembali(date('Y-m-d',strtotime($request->get('tgl_kembali'))));
+                    $peminjaman->setNamaPengembalian($request->get('nama_pengembalian'));
+                    $peminjaman->setUnitPeminjam($request->get('unit_peminjam'));
+                    $peminjaman->setUnitPengembalian($request->get('unit_pengembalian'));
+                }
             }
 
             $em->persist($peminjaman);
