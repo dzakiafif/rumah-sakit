@@ -241,7 +241,7 @@ class AdminController extends Controller
             return $this->redirect($this->generateUrl('app_admin_daftar_peminjaman'));
         }
 
-        return $this->render('AppBundle:peminjaman:update-peminjaman.html.twig',['peminjaman'=>$peminjaman]);
+        return $this->render('AppBundle:peminjaman:update-peminjaman.html.twig',['peminjam'=>$peminjaman]);
         
     }
 
