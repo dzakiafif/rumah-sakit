@@ -15,6 +15,11 @@ class Peminjaman
     private $id;
 
     /**
+     * @var int
+     */
+    private $drm;
+
+    /**
      * @var \DateTime
      */
     private $tglPeminjaman;
@@ -39,15 +44,44 @@ class Peminjaman
      */
     private $namaPengembalian;
 
+    /**
+     * @var string
+     */
+    private $unitPeminjam;
+
+    /**
+     * @var string
+     */
+    private $unitPengembalian;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param Drm $drm
+     * @return $this
+     */
+    public function setDrm(Drm $drm)
+    {
+        $this->drm = $drm;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDrm()
+    {
+        return $this->drm;
     }
 
     /**
@@ -163,5 +197,43 @@ class Peminjaman
     public function getNamaPengembalian()
     {
         return $this->namaPengembalian;
+    }
+
+    /**
+     * @param $unitPeminjam
+     * @return $this
+     */
+    public function setUnitPeminjam($unitPeminjam)
+    {
+        $this->unitPeminjam =$unitPeminjam;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnitPeminjam()
+    {
+        return $this->unitPeminjam;
+    }
+
+    /**
+     * @param $unitPengembalian
+     * @return $this
+     */
+    public function setUnitPengembalian($unitPengembalian)
+    {
+        $this->unitPengembalian = $unitPengembalian;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnitPengembalian()
+    {
+        return $this->unitPengembalian;
     }
 }

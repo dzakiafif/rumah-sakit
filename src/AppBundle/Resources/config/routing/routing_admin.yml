@@ -103,6 +103,16 @@ app_admin_daftar_peminjaman:
     defaults:
       _controller: AppBundle:Admin:getAllPeminjaman
 
+app_admin_update_peminjaman:
+    path: /update-peminjaman/{id}
+    defaults:
+      _controller: AppBundle:Admin:updatePeminjaman
+
+app_admin_detail_peminjaman:
+    path: /detail-peminjaman/{id}
+    defaults:
+      _controller: AppBundle:Admin:allDetailPeminjaman
+
 app_admin_update_dokter:
     path: /update-dokter/{id}
     defaults:
@@ -147,3 +157,13 @@ app_admin_list_klpcm:
     path: /klpcm
     defaults:
       _controller: AppBundle:Admin:getAllKlpcm
+
+app_admin_update_klpcm:
+    path: /update-klpcm/{id}
+    defaults:
+      _controller: AppBundle:Admin:updateKlpcm
+
+app_admin_detail_klpcm:
+    path: /detail-klpcm/{id}
+    defaults:
+      _controller: AppBundle:Admin:getDetailKlpcm

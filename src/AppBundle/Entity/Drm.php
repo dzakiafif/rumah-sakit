@@ -88,7 +88,6 @@ class Drm
      */
     private $isValidated;
 
-
     /**
      * Get id
      *

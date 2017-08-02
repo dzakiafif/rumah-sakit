@@ -1,0 +1,41 @@
+{% extends 'subLayout.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            <center>Detail KLPCM</center>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <p>pr :{% if data.pr is not null %}
+                                {% if data.pr == 1 %}
+                                    Dokter
+                                {% elseif data.pr == 2 %}
+                                    Perawat
+                                {% else %}
+                                    Ahli Gizi
+                                {% endif %}
+                                {% endif %}
+                        </p>
+                        <p>Poli : {% if data.poli is not null %}{{ data.poli.namaPoli }}{% endif %}</p>
+                        <p>Tanggal Setor : {% if data.tglSetor is not null %}{{ data.tglSetor|date('d m Y') }}{% endif %}</p>
+                        <p>Tanggal Kembali : {% if data.tglKembali is not null %}{{ data.tglKembali|date('d m Y') }}{% endif %}</p>
+                        <p>catatan jam :
+                            {% if data.catatanJam is not null %}
+                                {% if data.catatanJam == 1 %}
+                                    < 48 Jam
+                                {% else %}
+                                    > 48 Jam
+                                {% endif %}
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

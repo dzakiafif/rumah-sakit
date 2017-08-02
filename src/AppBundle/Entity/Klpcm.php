@@ -17,6 +17,16 @@ class Klpcm
     /**
      * @var int
      */
+    private $drm;
+
+    /**
+     * @var int
+     */
+    private $poli;
+
+    /**
+     * @var int
+     */
     private $pr;
 
     /**
@@ -30,7 +40,7 @@ class Klpcm
     private $tglKembali;
 
     /**
-     * @var string
+     * @var int
      */
     private $catatanJam;
 
@@ -43,6 +53,44 @@ class Klpcm
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param Drm $drm
+     * @return $this
+     */
+    public function setDrm(Drm $drm)
+    {
+        $this->drm = $drm;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDrm()
+    {
+        return $this->drm;
+    }
+
+    /**
+     * @param Poli $poli
+     * @return $this
+     */
+    public function setPoli(Poli $poli)
+    {
+        $this->poli = $poli;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPoli()
+    {
+        return $this->poli;
     }
 
     /**
@@ -61,7 +109,7 @@ class Klpcm
     /**
      * Get pr
      *
-     * @return integer 
+     * @return integer
      */
     public function getPr()
     {
@@ -76,7 +124,7 @@ class Klpcm
      */
     public function setTglSetor($tglSetor)
     {
-        $this->tglSetor = $tglSetor;
+        $this->tglSetor = new \DateTime($tglSetor);
 
         return $this;
     }
@@ -99,7 +147,7 @@ class Klpcm
      */
     public function setTglKembali($tglKembali)
     {
-        $this->tglKembali = $tglKembali;
+        $this->tglKembali = new \DateTime($tglKembali);
 
         return $this;
     }
@@ -117,7 +165,7 @@ class Klpcm
     /**
      * Set catatanJam
      *
-     * @param string $catatanJam
+     * @param integer $catatanJam
      * @return Klpcm
      */
     public function setCatatanJam($catatanJam)
@@ -130,7 +178,7 @@ class Klpcm
     /**
      * Get catatanJam
      *
-     * @return string 
+     * @return int
      */
     public function getCatatanJam()
     {

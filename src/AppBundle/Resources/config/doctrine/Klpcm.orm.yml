@@ -8,17 +8,32 @@ AppBundle\Entity\Klpcm:
             id: true
             generator:
                 strategy: AUTO
+    oneToOne:
+        drm:
+            targetEntity: Drm
+            joinColumn:
+                  name: drm
+                  referencedColumnName: id
+                  onDelete: "SET NULL"
+
+    manyToOne:
+        poli:
+            targetEntity: Poli
+            joinColumn:
+                  name: poli
+                  referencedColumnName: id
+                  onDelete: "SET NULL"
     fields:
         pr:
             type: integer
         tglSetor:
             type: datetime
             column: tgl_setor
+            nullable: true
         tglKembali:
             type: datetime
             column: tgl_kembali
         catatanJam:
-            type: string
-            length: 255
+            type: integer
             column: catatan_jam
     lifecycleCallbacks: {  }

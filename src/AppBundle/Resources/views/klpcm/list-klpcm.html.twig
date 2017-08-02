@@ -23,6 +23,7 @@
                                 <th>Ruangan</th>
                                 <th>DPJP</th>
                                 <th>Penjamin</th>
+                                <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,6 +38,10 @@
                                         <td>{% if dat.ruangan is not null %}{{ dat.ruangan.namaRuangan }}{% endif %}</td>
                                         <td>{% if dat.dokter is not null %}{{ dat.dokter.namaDokter }}{% endif %}</td>
                                         <td>{% if dat.penjamin is not null %}{{ dat.penjamin.namaPenjamin }}{% endif %}</td>
+                                        <td>
+                                            <a href="{{ path('app_admin_update_klpcm',{id: dat.id}) }}" class="btn btn-primary btn-xs">UPDATE</a>
+                                            <a href="{{ path('app_admin_detail_klpcm',{id: dat.id}) }}" class="btn btn-success btn-xs">DETAIL</a>
+                                        </td>
                                     </tr>
                                     {% set i = i + 1 %}
                                 {% endfor %}

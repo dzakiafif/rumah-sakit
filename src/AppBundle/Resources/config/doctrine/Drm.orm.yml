@@ -73,6 +73,7 @@ AppBundle\Entity\Drm:
         jenisBerkas:
             type: integer
             column: jenis_berkas
+            nullable: true
         isValidated:
             type: integer
             column: is_validated

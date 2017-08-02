@@ -8,6 +8,13 @@ AppBundle\Entity\Peminjaman:
             id: true
             generator:
                 strategy: AUTO
+    manyToOne:
+         drm:
+            targetEntity: Drm
+            joinColumn:
+                name: drm
+                referencedColumnName: id
+                onDelete: "SET NULL"
     fields:
         tglPeminjaman:
             type: datetime
@@ -27,4 +34,12 @@ AppBundle\Entity\Peminjaman:
             type: string
             length: 255
             column: nama_pengembalian
+        unitPeminjam:
+            type: string
+            length: 255
+            column: unit_peminjam
+        unitPengembalian:
+            type: string
+            length: 255
+            column: unit_pengembalian
     lifecycleCallbacks: {  }

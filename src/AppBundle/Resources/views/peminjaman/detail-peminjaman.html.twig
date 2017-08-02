@@ -1,0 +1,26 @@
+{% extends 'subLayout.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            <center>Detail Data Peminjaman</center>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <p>Nama Peminjam : {% if data.namaPeminjam is not null %}{{ data.namaPeminjam }}{% endif %}</p>
+                        <p>Petugas Rekam Medis : {% if data.petugasRekamMedis is not null %}{{ data.petugasRekamMedis }}{% endif %}</p>
+                        <p>Nama Pengembalian : {% if data.namaPengembalian is not null %}{{ data.namaPengembalian }}{% endif %}</p>
+                        <p>Unit Peminjam : {% if data.unitPeminjam is not null %}{{ data.unitPeminjam }}{% endif %}</p>
+                        <p>Unit Pengembalian : {% if data.unitPengembalian is not null %}{{ data.unitPengembalian }}{% endif %}</p>
+                        <p>Tanggal Peminjam : {% if data.tglPeminjaman is not null %}{{ data.tglPeminjaman|date('d m Y') }}{% endif %}</p>
+                        <p>Tanggal Pengembalian : {% if data.tglKembali is not null %}{{ data.tglKembali|date('d m Y') }}{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -12,8 +12,11 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Diagnosa;
 use AppBundle\Entity\Dokter;
 use AppBundle\Entity\Drm;
+use AppBundle\Entity\Klpcm;
 use AppBundle\Entity\Pasien;
+use AppBundle\Entity\Peminjaman;
 use AppBundle\Entity\Penjamin;
+use AppBundle\Entity\Poli;
 use AppBundle\Entity\Ruangan;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -63,6 +66,7 @@ class AdminController extends Controller
 //            return var_dump($drm);
             
             $em->persist($drm);
+
             $em->flush();
 
             return $this->redirect($this->generateUrl('app_admin_daftar_drm'));
@@ -130,4 +134,112 @@ class AdminController extends Controller
             'data' => $data
         ]);
     }
+
+    public function updateKlpcmAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $drm = $em->getRepository(Drm::class)->find($id);
+
+        $klpcm = $em->getRepository(Klpcm::class)->findByDrmId($drm->getId());
+
+        $poli = $em->getRepository(Poli::class)->findAll();
+
+        if($request->getMethod() == 'POST') {
+            if($klpcm == null) {
+                $klpcm = new Klpcm();
+                $klpcm->setPr($request->get('pr'));
+                $klpcm->setDrm($drm);
+                $klpcm->setPoli($em->getRepository(Poli::class)->find($request->get('poli')));
+                $klpcm->setCatatanJam($request->get('catatan_jam'));
+                $klpcm->setTglSetor(date('Y-m-d',strtotime($request->get('tgl_setor'))));
+                $klpcm->setTglKembali(date('Y-m-d',strtotime($request->get('tgl_kembali'))));
+
+//                $drm->setJenisBerkas($request->get('jenis_berkas'));
+//                $em->persist($drm);
+            }else{
+                if($klpcm instanceof Klpcm ) {
+                    $klpcm->setPr($request->get('pr'));
+                    $klpcm->setDrm($drm);
+                    $klpcm->setPoli($em->getRepository(Poli::class)->find($request->get('poli')));
+                    $klpcm->setCatatanJam($request->get('catatan_jam'));
+                    $klpcm->setTglSetor(date('Y-m-d',strtotime($request->get('tgl_setor'))));
+                    $klpcm->setTglKembali(date('Y-m-d',strtotime($request->get('tgl_kembali'))));
+
+                    $drm->setJenisBerkas($request->get('jenis_berkas'));
+                $em->persist($drm);
+                }
+            }
+
+
+//            return var_dump($klpcm);
+            $em->persist($klpcm);
+
+
+//            return var_dump($drm);
+
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_list_klpcm'));
+        }
+
+        return $this->render('AppBundle:klpcm:update-klpcm.html.twig',[
+            'klpcm'=>$klpcm,
+            'poli' => $poli
+        ]);
+    }
+
+    public function getDetailKlpcmAction($id) {
+
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Klpcm::class)->find($id);
+
+//        return var_dump($asem);
+
+        return $this->render('AppBundle:klpcm:detail-klpcm.html.twig',[
+            'data'=> $data
+        ]);
+    }
+
+    public function updatePeminjamanAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $drm = $em->getRepository(Drm::class)->find($id);
+
+        $peminjaman = $em->getRepository(Peminjaman::class)->findByDrmId($drm->getId());
+
+        if($request->getMethod() == 'POST') {
+            if($peminjaman == null) {
+                $peminjaman = new Peminjaman();
+                $peminjaman->setDrm($drm);
+                $peminjaman->setNamaPeminjam($request->get('nama_peminjam'));
+                $peminjaman->setPetugasRekamMedis($request->get('petugas'));
+                $peminjaman->setTglPeminjaman(date('Y-m-d',strtotime($request->get('tgl_peminjam'))));
+                $peminjaman->setTglKembali(date('Y-m-d',strtotime($request->get('tgl_kembali'))));
+                $peminjaman->setNamaPengembalian($request->get('nama_pengembalian'));
+                $peminjaman->setUnitPeminjam($request->get('unit_peminjam'));
+                $peminjaman->setUnitPengembalian($request->get('unit_pengembalian'));
+            }
+
+            $em->persist($peminjaman);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_admin_daftar_peminjaman'));
+        }
+
+        return $this->render('AppBundle:peminjaman:update-peminjaman.html.twig',['peminjaman'=>$peminjaman]);
+        
+    }
+
+    public function allDetailPeminjamanAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $data = $em->getRepository(Peminjaman::class)->find($id);
+
+        return $this->render('AppBundle:peminjaman:detail-peminjaman.html.twig',['data'=>$data]);
+    }
+
 }

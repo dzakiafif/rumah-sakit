@@ -1,0 +1,89 @@
+{% extends 'subLayout.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            <center>Data Klpcm</center>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <form method="post">
+                            <div class="form-group">
+                                <p>PR</p>
+                                <select name="pr" id="select-pr" class="form-control">
+                                    <option value="">-- Pilih PR --</option>
+                                    <option value="1">Dokter</option>
+                                    <option value="2">Perawat</option>
+                                    <option value="3">Ahli Gizi</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <select name="poli" id="" class="form-control">
+                                    <option value="">-- Pilih Poli --</option>
+                                    {% for item in poli %}
+                                        <option value="{{ item.id }}">{{ item.namaPoli }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="catatan_jam" id="" class="form-control">
+                                    <option value="">-- Pilih Jam --</option>
+                                    <option value="1"> < 48 Jam</option>
+                                    <option value="2"> > 48 jam </option>
+                                </select>
+                            </div>
+                            <div id="tgl-setor" class="hide">
+                                <div class="form-group">
+                                    <p>Tanggal Setor</p>
+                                    <div class="form-line">
+                                        <input type="text" name="tgl_setor" class="datepicker form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p>Tanggal Kembali</p>
+                                <div class="form-line">
+                                    <input type="text" id="tgl-kembali" name="tgl_kembali" class="datepicker form-control">
+                                </div>
+                            </div>
+                            <div id="jenis-berkas" class="hide">
+                                <div class="form-group">
+                                    <select name="jenis_berkas" id="" class="form-control">
+                                        <option value="">-- Pilih Berkas --</option>
+                                        <option value="1">Lengkap</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary waves-effect">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block customJS %}
+    <script>
+        $('.datepicker').bootstrapMaterialDatePicker({
+           time: false
+        });
+
+        $('#select-pr').change(function () {
+            if(this.value == 1) {
+                $('#tgl-setor').removeClass('hide');
+            }else {
+                $('#tgl-setor').addClass('hide');
+            }
+
+            if(this.value == 3) {
+                $('#jenis-berkas').removeClass('hide');
+            }
+        });
+    </script>
+{% endblock %}
