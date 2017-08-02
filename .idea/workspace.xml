@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a981a907-a86f-4bfd-81ef-dc65a8ca5599" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/update-peminjaman.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/update-peminjaman.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig" />
     </list>
     <ignored path="dita.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +50,8 @@
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="241" column="9" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
+            <state relative-caret-position="204">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#121#151#0#PHP" expanded="true" />
               </folding>
@@ -88,11 +89,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update-klpcm.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update-klpcm.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+            <state relative-caret-position="115">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subLayout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/subLayout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+              <folding>
+                <marker date="1501701775100" expanded="false" signature="10329:10339" ph="..." />
+                <marker date="1501701775100" expanded="false" signature="11158:11168" ph="..." />
+                <marker date="1501701775100" expanded="false" signature="11991:12001" ph="..." />
+                <marker date="1501701775100" expanded="false" signature="12828:12838" ph="..." />
+                <marker date="1501701775100" expanded="false" signature="13666:13676" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -109,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/penjamin/update-penjamin.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/poli/update-poli.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RuanganController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/input-diagnosa.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DiagnosaController.php" />
@@ -132,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PasienController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/update-pasien.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/pasien/pasien.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/drm/list-drm.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/update-dokter.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/diagnosa/update-diagnosa.html.twig" />
@@ -154,9 +189,11 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/detail-klpcm.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Klpcm.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Drm.orm.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/update-peminjaman.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/subLayout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig" />
       </list>
     </option>
   </component>
@@ -854,7 +891,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;update&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig&#10;drm&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Drm.php&#10;ad&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;dr&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/drm/input-drm.html.twig&#10;updat&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig&#10;detail&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/detail-klpcm.html.twig&#10;klp&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Klpcm.php&#10;kl&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/doctrine/Klpcm.orm.yml&#10;list&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig&#10;rou&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;a&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;ro&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;Pemin&#9;null&#9;null&#10;Admin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;routing&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;routi&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;pemin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Peminjaman.php&#10;setPenge&#9;null&#9;null&#10;peminj&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/doctrine/Peminjaman.orm.yml&#10;klpc&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Repository/KlpcmRepository.php&#10;drmR&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Repository/DrmRepository.php&#10;layou&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/layout.html.twig&#10;input&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/drm/input-drm.html.twig&#10;upda&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/diagnosa/update-diagnosa.html.twig&#10;Dia&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DiagnosaController.php&#10;routin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;sub&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/subLayout.html.twig&#10;pasien&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/pasien/pasien.html.twig&#10;pasie&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PasienController.php&#10;routing_ad&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;Pasi&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PasienController.php&#10;list-&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/filling/list-filling.html.twig&#10;ruangan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;lay&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/layout.html.twig&#10;Poli&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PoliController.php&#10;Pen&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php&#10;Ruang&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/RuanganController.php&#10;list-ru&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;list-ruan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;Dokter&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DokterController.php&#10;do&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/dokter/list-dokter.html.twig&#10;routing_&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;PoliCon&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PoliController.php&#10;update-pen&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/penjamin/update-penjamin.html.twig&#10;Penjamin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php&#10;DOkter&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DokterController.php&#10;Ruangan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/RuanganController.php&#10;PenjaminCon&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php" />
+    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;home&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/home/home.html.twig&#10;sub&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/subLayout.html.twig&#10;update&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig&#10;drm&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Drm.php&#10;ad&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;dr&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/drm/input-drm.html.twig&#10;updat&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig&#10;detail&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/klpcm/detail-klpcm.html.twig&#10;klp&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Klpcm.php&#10;kl&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/doctrine/Klpcm.orm.yml&#10;list&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/peminjaman/list-peminjaman.html.twig&#10;rou&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;a&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;ro&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;Pemin&#9;null&#9;null&#10;Admin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/AdminController.php&#10;routing&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;routi&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;pemin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Entity/Peminjaman.php&#10;setPenge&#9;null&#9;null&#10;peminj&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/doctrine/Peminjaman.orm.yml&#10;klpc&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Repository/KlpcmRepository.php&#10;drmR&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Repository/DrmRepository.php&#10;layou&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/layout.html.twig&#10;input&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/drm/input-drm.html.twig&#10;upda&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/diagnosa/update-diagnosa.html.twig&#10;Dia&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DiagnosaController.php&#10;routin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;pasien&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/pasien/pasien.html.twig&#10;pasie&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PasienController.php&#10;routing_ad&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;Pasi&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PasienController.php&#10;list-&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/filling/list-filling.html.twig&#10;ruangan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;lay&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/app/Resources/views/layout.html.twig&#10;Poli&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PoliController.php&#10;Pen&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php&#10;Ruang&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/RuanganController.php&#10;list-ru&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;list-ruan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/ruangan/list-ruangan.html.twig&#10;Dokter&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DokterController.php&#10;do&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/dokter/list-dokter.html.twig&#10;routing_&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/config/routing/routing_admin.yml&#10;PoliCon&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PoliController.php&#10;update-pen&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Resources/views/penjamin/update-penjamin.html.twig&#10;Penjamin&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php&#10;DOkter&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/DokterController.php&#10;Ruangan&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/RuanganController.php&#10;PenjaminCon&#9;FILE&#9;file:///home/dzaki/Documents/belajar/dita/src/AppBundle/Controller/PenjaminController.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -943,12 +980,12 @@
       <workItem from="1501640946824" duration="1234000" />
       <workItem from="1501653109359" duration="19519000" />
       <workItem from="1501679007936" duration="774000" />
-      <workItem from="1501700114289" duration="1197000" />
+      <workItem from="1501700114289" duration="2332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137850000" />
+    <option name="totallyTimeSpent" value="138985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="0" />
@@ -989,20 +1026,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/list-dokter.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -1157,13 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/subLayout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="302" column="74" selection-start-line="302" selection-start-column="74" selection-end-line="302" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/dokter/update-dokter.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1281,7 +1297,7 @@
         <state relative-caret-position="644">
           <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
           <folding>
-            <element signature="e#40#95#0#PHP" expanded="true" />
+            <element signature="e#40#95#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1334,16 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="241" column="9" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
-          <folding>
-            <element signature="e#121#151#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/peminjaman/update-peminjaman.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -1354,8 +1360,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/klpcm/update-klpcm.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+        <state relative-caret-position="115">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/subLayout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding>
+            <marker date="1501701775100" expanded="false" signature="10329:10339" ph="..." />
+            <marker date="1501701775100" expanded="false" signature="11158:11168" ph="..." />
+            <marker date="1501701775100" expanded="false" signature="11991:12001" ph="..." />
+            <marker date="1501701775100" expanded="false" signature="12828:12838" ph="..." />
+            <marker date="1501701775100" expanded="false" signature="13666:13676" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#121#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
           <folding />
         </state>
       </provider>

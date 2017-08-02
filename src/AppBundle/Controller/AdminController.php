@@ -30,7 +30,15 @@ class AdminController extends Controller
 
         $user = count($em->getRepository(User::class)->findAll());
 
-        return $this->render('AppBundle:home:home.html.twig',['user'=>$user]);
+        $klpcm = count($em->getRepository(Klpcm::class)->findAll());
+
+        $peminjaman = count($em->getRepository(Peminjaman::class)->findAll());
+
+        return $this->render('AppBundle:home:home.html.twig',[
+            'user'=>$user,
+            'klpcm' => $klpcm,
+            'peminjaman' => $peminjaman
+        ]);
     }
 
     public function inputDrmAction(Request $request)
