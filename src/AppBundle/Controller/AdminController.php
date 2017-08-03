@@ -189,8 +189,6 @@ class AdminController extends Controller
                     $klpcm->setTglSetor(date('Y-m-d',strtotime($request->get('tgl_setor'))));
                     $klpcm->setTglKembali(date('Y-m-d',strtotime($request->get('tgl_kembali'))));
 
-                    $drm->setJenisBerkas($request->get('jenis_berkas'));
-                $em->persist($drm);
                 }
             }
 
@@ -198,6 +196,8 @@ class AdminController extends Controller
 //            return var_dump($klpcm);
             $em->persist($klpcm);
 
+            $drm->setJenisBerkas($request->get('jenis_berkas'));
+            $em->persist($drm);
 
 //            return var_dump($drm);
 
