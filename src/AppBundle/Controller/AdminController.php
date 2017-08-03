@@ -113,6 +113,46 @@ class AdminController extends Controller
         return $this->render('AppBundle:drm:list-drm.html.twig',['data'=>$data]);
     }
 
+    public function updateDrmAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $drm = $em->getRepository(Drm::class)->find($id);
+
+        if($request->getMethod() == 'POST') {
+            $drm->setTglMrs(date('Y-m-d',strtotime($request->get('tgl_mrs'))));
+            $drm->setTglKrs(date('Y-m-d',strtotime($request->get('tgl_krs'))));
+            $drm->setTglSetor(date('Y-m-d',strtotime($request->get('tgl_setor'))));
+            $drm->setCatatanJam($request->get('catatan_jam'));
+            $drm->setPasien($em->getRepository(Pasien::class)->find($request->get('pasien')));
+            $drm->setDiagnosa($em->getRepository(Diagnosa::class)->find($request->get('diagnosa')));
+            $drm->setPenjamin($em->getRepository(Penjamin::class)->find($request->get('penjamin')));
+            $drm->setDokter($em->getRepository(Dokter::class)->find($request->get('dokter')));
+            $drm->setRuangan($em->getRepository(Ruangan::class)->find($request->get('ruangan')));
+            $drm->setKondisiPulang($request->get('kondisi_pulang'));
+            $drm->setRujukan($request->get('rujukan'));
+            $drm->setOperasi($request->get('operasi'));
+            $drm->setJenisBerkas($request->get('jenis_berkas'));
+
+//            return var_dump($drm);
+
+            $em->persist($drm);
+
+            $em->flush();
+
+            if($drm instanceof Drm) {
+                if ($drm->getJenisBerkas() == 1) {
+                    return $this->redirect($this->generateUrl('app_admin_daftar_filling'));
+                }elseif ($drm->getJenisBerkas() == 2) {
+                    return $this->redirect($this->generateUrl('app_admin_list_klpcm'));
+                }else {
+                    return $this->redirect($this->generateUrl('app_admin_daftar_peminjaman'));
+                }
+            }
+        }
+        return $this->render('AppBundle:drm:update-drm.html.twig',['drm'=>$drm]);
+    }
+
     public function getAllFillingAction()
     {
         $em = $this->getDoctrine()->getEntityManager();

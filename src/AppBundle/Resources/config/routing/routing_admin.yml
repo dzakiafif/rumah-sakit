@@ -33,6 +33,11 @@ app_admin_daftar_drm:
     defaults:
       _controller: AppBundle:Admin:getAllDrm
 
+app_admin_update_drm:
+    path: /update-drm/{id}
+    defaults:
+      _controller: AppBundle:Admin:updateDrm
+
 app_admin_input_diagnosa:
     path: /input-diagnosa
     defaults:
