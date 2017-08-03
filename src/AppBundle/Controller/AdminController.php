@@ -34,10 +34,17 @@ class AdminController extends Controller
 
         $peminjaman = count($em->getRepository(Peminjaman::class)->findAll());
 
+        $qb = $em->createQueryBuilder();
+
+        $qb->select('u')->from(Drm::class,'u')->where('u.jenisBerkas = 1');
+
+        $filling = count($qb->getQuery()->getResult());
+
         return $this->render('AppBundle:home:home.html.twig',[
             'user'=>$user,
             'klpcm' => $klpcm,
-            'peminjaman' => $peminjaman
+            'peminjaman' => $peminjaman,
+            'filling' => $filling
         ]);
     }
 
@@ -77,7 +84,15 @@ class AdminController extends Controller
 
             $em->flush();
 
-            return $this->redirect($this->generateUrl('app_admin_daftar_drm'));
+            if($drm instanceof Drm) {
+                if ($drm->getJenisBerkas() == 1) {
+                    return $this->redirect($this->generateUrl('app_admin_daftar_filling'));
+                }elseif ($drm->getJenisBerkas() == 2) {
+                    return $this->redirect($this->generateUrl('app_admin_list_klpcm'));
+                }else {
+                    return $this->redirect($this->generateUrl('app_admin_daftar_peminjaman'));
+                }
+            }
         }
 
         return $this->render('AppBundle:drm:input-drm.html.twig',[
