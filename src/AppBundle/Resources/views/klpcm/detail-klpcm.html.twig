@@ -13,7 +13,7 @@
                         </h2>
                     </div>
                     <div class="body">
-                        <p>pr :{% if data.pr is not null %}
+                        <p>pr :{% if data.pr is defined and not null %}
                                 {% if data.pr == 1 %}
                                     Dokter
                                 {% elseif data.pr == 2 %}
@@ -23,11 +23,11 @@
                                 {% endif %}
                                 {% endif %}
                         </p>
-                        <p>Poli : {% if data.poli is not null %}{{ data.poli.namaPoli }}{% endif %}</p>
-                        <p>Tanggal Setor : {% if data.tglSetor is not null %}{{ data.tglSetor|date('d m Y') }}{% endif %}</p>
-                        <p>Tanggal Kembali : {% if data.tglKembali is not null %}{{ data.tglKembali|date('d m Y') }}{% endif %}</p>
+                        <p>Poli : {% if data.poli is defined and not null %}{{ data.poli.namaPoli }}{% endif %}</p>
+                        <p>Tanggal Setor : {% if data.tglSetor is defined and not null %}{{ data.tglSetor|date('d m Y') }}{% endif %}</p>
+                        <p>Tanggal Kembali : {% if data.tglKembali is defined and not null %}{{ data.tglKembali|date('d m Y') }}{% endif %}</p>
                         <p>catatan jam :
-                            {% if data.catatanJam is not null %}
+                            {% if data.catatanJam is defined and not null %}
                                 {% if data.catatanJam == 1 %}
                                     < 48 Jam
                                 {% else %}

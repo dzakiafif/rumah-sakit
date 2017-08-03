@@ -134,7 +134,7 @@ class AdminController extends Controller
 
         $qb = $em->createQueryBuilder();
 
-        $qb->select('u')->from(Drm::class,'u')->where('u.jenisBerkas = 3');
+        $qb->select('u')->from(Drm::class,'u')->where('u.jenisBerkas = 2')->orWhere('u.jenisBerkas = 1');
 
         $data = $qb->getQuery()->getResult();
 
