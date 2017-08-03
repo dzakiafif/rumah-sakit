@@ -117,6 +117,16 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
+        $diagnosa = $em->getRepository(Diagnosa::class)->findAll();
+
+        $pasien = $em->getRepository(Pasien::class)->findAll();
+
+        $penjamin = $em->getRepository(Penjamin::class)->findAll();
+
+        $dokter = $em->getRepository(Dokter::class)->findAll();
+
+        $ruangan = $em->getRepository(Ruangan::class)->findAll();
+
         $drm = $em->getRepository(Drm::class)->find($id);
 
         if($request->getMethod() == 'POST') {
@@ -150,7 +160,14 @@ class AdminController extends Controller
                 }
             }
         }
-        return $this->render('AppBundle:drm:update-drm.html.twig',['drm'=>$drm]);
+        return $this->render('AppBundle:drm:update-drm.html.twig',[
+            'drm'=>$drm,
+            'diagnosa' => $diagnosa,
+            'pasien' => $pasien,
+            'penjamin' => $penjamin,
+            'dokter' => $dokter,
+            'ruangan' => $ruangan
+        ]);
     }
 
     public function getAllFillingAction()
