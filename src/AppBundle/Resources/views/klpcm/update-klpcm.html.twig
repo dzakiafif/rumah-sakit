@@ -18,9 +18,9 @@
                                 <p>PR</p>
                                 <select name="pr" id="select-pr" class="form-control">
                                     <option value="">-- Pilih PR --</option>
-                                    <option value="1" {% if klpcm.pr == 1 %}selected{% endif %}>Dokter</option>
-                                    <option value="2" {% if klpcm.pr == 2 %}selected{% endif %}>Perawat</option>
-                                    <option value="3" {% if klpcm.pr == 3 %}selected{% endif %}>Ahli Gizi</option>
+                                    <option value="1" {% if klpcm.pr is defined and not null %}{% if klpcm.pr == 1 %}selected{% endif %}{% endif %}>Dokter</option>
+                                    <option value="2" {% if klpcm.pr is defined and not null %}{% if klpcm.pr == 2 %}selected{% endif %}{% endif %}>Perawat</option>
+                                    <option value="3" {% if klpcm.pr is defined and not null %}{% if klpcm.pr == 3 %}selected{% endif %}{% endif %}>Ahli Gizi</option>
                                 </select>
 
                             </div>
@@ -35,8 +35,8 @@
                             <div class="form-group">
                                 <select name="catatan_jam" id="" class="form-control">
                                     <option value="">-- Pilih Jam --</option>
-                                    <option value="1" {% if klpcm.catatanJam == 1 %}selected{% endif %}> < 48 Jam</option>
-                                    <option value="2" {% if klpcm.catatanJam == 2 %}selected{% endif %}> > 48 jam </option>
+                                    <option value="1" {% if klpcm.catatanJam is defined and not null %}{% if klpcm.catatanJam == 1 %}selected{% endif %}{% endif %}> < 48 Jam</option>
+                                    <option value="2" {% if klpcm.catatanJam is defined and not null %}{% if klpcm.catatanJam == 2 %}selected{% endif %}{% endif %}> > 48 jam </option>
                                 </select>
                             </div>
                             <div id="tgl-setor" class="hide">
@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                     <select name="jenis_berkas" id="" class="form-control">
                                         <option value="">-- Pilih Berkas --</option>
-                                        <option value="1" {% if drm.jenisBerkas == 1 %}selected{% endif %}>Lengkap</option>
+                                        <option value="1"{% if drm.jenisBerkas == 1 %}selected{% endif %}>Lengkap</option>
                                     </select>
                                 </div>
                             </div>
